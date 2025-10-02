@@ -3,14 +3,14 @@
 #include "hardware/adc.h"
 
 // Definições de pinos
-#define SPEC_TRG     26
-#define SPEC_ST      27
-#define SPEC_CLK     28
+#define SPEC_TRG     18
+#define SPEC_ST      14
+#define SPEC_CLK     16
 
-// ADC3 (GPIO29)
-#define SPEC_VIDEO   29
-#define WHITE_LED    21
-#define LASER_404    22
+// ADC2 (GPIO28)
+#define SPEC_VIDEO   28
+#define WHITE_LED    17
+#define LASER_404    15
 
 // Configurações do espectrômetro
 #define SPEC_CHANNELS 288
@@ -101,7 +101,7 @@ int main() {
 
     // Configura ADC
     adc_init();
-    // GPIO29 → ADC3
+    // GPIO28 → ADC2
     adc_gpio_init(SPEC_VIDEO);
     adc_select_input(3);
 
